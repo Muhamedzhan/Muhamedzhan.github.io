@@ -6,12 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta property="og:url" content="">
     <meta property="og:type" content="website">
-    <meta property="og:title" content="Артем Исламов - верстка сайтов на HTML и CSS">
+    <meta property="og:title" content="Искусственные ёлки по самым низким ценам!">
     <meta property="og:image" content="">
-    <meta property="og:description" content="Закажите разработку сайта без посредников от 5 990 рублей">
-    <meta property="og:site_name" content="Портфолио верстальщика">
-    <meta property="article:author" content="Артем Исламов">
-    <title>Артем Исламов - Портфолио</title>
+    <meta property="og:description" content="Искусственные ёлки от 5990тг!">
+    <meta property="og:site_name" content="Новогодняя ёлка">
+    <meta property="article:author" content="Досмуханбет Мухамеджан">
+    <title>Искусственные ёлки по доступной цене</title>
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&amp;subset=cyrillic" rel="stylesheet">
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/fontello.css" rel="stylesheet">
@@ -29,17 +29,17 @@
       <div class="main-overlay"></div>
       <div class="wrapper">
         <div class="main-header">
-        <h1>Искусственные елки</h1>
+        <h1>Искусственные ёлки</h1>
         <div class="main-line"></div>
-          <p>Верстка на HTML и CSS <br> Разработка сайтов под ключ</p>
+          <p>Доставим за 2 часа <br> или подарим бесплатно!</p>
       </div>
       </div>
-      <a class="main-down-open" href='#'><i class="icon-down-open"></i></a>
+      <a class="main-down-open" href='#portfolio'><i class="icon-down-open"></i></a>
     </div>
 
-    <div class="portfolio">
+    <div class="portfolio" id="portfolio">
       <div class="container">
-        <h2 class="section-header">Портфолио</h2>
+        <h2 class="section-header">Ёлки на любой вкус</h2>
         <div class="row">
           <div class="col-md-4">
             <div class="portfolio-block">
@@ -113,6 +113,16 @@
           var work = $(this).attr('data-work');
           var modal = $('.modal');
           modal.find('.modal-body').load(work+'.html');
+        });
+      });
+    </script>
+    <script>
+      $(document).ready(function() {
+        $(".main-down-open").on("click", function (event) {
+          event.preventDefault();
+          var id = $(this).attr('href'),
+          top = $(id).offset().top;
+          $('body,html').animate({scrollTop: top}, 800);
         });
       });
     </script>
